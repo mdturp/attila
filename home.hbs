@@ -1,0 +1,41 @@
+{{!< default}}
+<header class="blog-header {{#if @site.cover_image}} has-cover{{/if}}">
+	<div class="inner">
+		<div class="box blog-box">
+			<h1 class="blog-name">{{@site.title}}</h1>
+			{{#if @site.description}}
+			<span class="blog-description">{{@site.description}}</span>
+			{{/if}}
+		</div>
+		{{#if @site.cover_image}}
+		<div class="blog-cover cover">
+			<img
+			srcset="{{img_url @site.cover_image size="s"}} 320w,
+              {{img_url @site.cover_image size="m"}} 640w,
+              {{img_url @site.cover_image size="l"}} 960w,
+              {{img_url @site.cover_image size="xl"}} 1920w"
+      src="{{img_url @site.cover_image size="xl"}}"
+			alt="{{@site.title}}" />
+		</div>
+		{{/if}}
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="{{post_class}}">
+        <div class="inner">
+            <section class="post-content">
+                <p>Hi, I am <a href="https://twitter.com/Dennis_Turp">@mdturp</a> 👋 <br>
+                I am a physics graduate from ETH Zurich and currently working
+                at <a href="https://www.modulos.ai/">Modulos.ai</a> as a data scientist.
+                I occasionally write here about topics in machine learning, statistics,
+                software engineering, and other things that caught my
+                attention. You can find my latest articles under <a href="{{@site.url}}/articles">Articles</a>.
+                Casual thoughts and ideas that do not full fill the conditions to be an article can be found under <a href="{{@site.url}}/crumbles">Crumbles</a>
+                If you want to know more about me, click on the
+                <a href="{{@site.url}}/about">About</a> page.</p>
+            </section>
+        </div>
+    </article>
+</main>
+
