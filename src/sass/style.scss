@@ -1633,7 +1633,7 @@ textarea {
 			flex-grow: 1;
 		}
 
-        &.nav-adjust,
+        
 		&.nav-twitter,
 		&.nav-facebook {
 			@media only screen and (max-width: $breakpoint-medium) {
@@ -1648,6 +1648,12 @@ textarea {
 		span {
 			display: none;
 		}
+
+        &.nav-adjust {
+            span {
+                display: inline-block;
+            }
+        }
 	}
 }
 
